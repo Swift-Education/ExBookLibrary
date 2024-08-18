@@ -16,13 +16,13 @@ protocol Requestable {
     var queryParameters: [String: Any] { get }
     var bodyParameters: [String: Any] { get }
     var logger: NetworkLoggerInterface { get }
+    
+    func createRequest(with config: NetworkConfigurable) throws -> URLRequest
 }
 
 extension Requestable {
-    func url() throws -> URL {
-        let baseURL = baseURL.last != "/"
-        ? baseURL + "/"
-        : baseURL
+    func url(with config: NetworkConfigurable) throws -> URL {
+        let baseURL = config.baseURL.absoluteString
         let endpoint = isFullPath ? path : baseURL.appending(path)
         
         guard var urlComponents = URLComponents(
@@ -30,12 +30,35 @@ extension Requestable {
         ) else { throw RequestGenerationError.components }
         var urlQueryItems = [URLQueryItem]()
 
+        config.queryParameters.forEach {
+            urlQueryItems.append(URLQueryItem(name: $0.key, value: $0.value))
+        }
+        
         queryParameters.forEach {
             urlQueryItems.append(URLQueryItem(name: $0.key, value: "\($0.value)"))
         }
         urlComponents.queryItems = !urlQueryItems.isEmpty ? urlQueryItems : nil
         guard let url = urlComponents.url else { throw RequestGenerationError.components }
         return url
+    }
+    
+    func createRequest(with config: NetworkConfigurable) throws -> URLRequest {
+        let url = try self.url(with: config)
+        var urlRequest = URLRequest(url: url)
+        var allHeaders: [String: String] = config.headers
+        headerParameters.forEach {
+            allHeaders.updateValue($0.value, forKey: $0.key)
+        }
+        
+        if !bodyParameters.isEmpty {
+            let httpbody = try? JSONSerialization.data(withJSONObject: bodyParameters)
+            urlRequest.httpBody = httpbody
+        }
+        
+        urlRequest.httpMethod = method.rawValue
+        urlRequest.allHTTPHeaderFields = allHeaders
+        
+        return urlRequest
     }
 }
 
