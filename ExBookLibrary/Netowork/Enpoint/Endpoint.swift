@@ -21,14 +21,12 @@ class Endpoint<R>: ResponseRequestable {
     let responseDecoder: ResponseDecoder
     let logger: NetworkLoggerInterface
     
-    init(baseURL: String = "https://pokeapi.co/api/v2",
+    init(baseURL: String = "https://dapi.kakao.com/v3",
          path: String,
          isFullPath: Bool = false,
          method: HTTPMethodType = .get,
          headerParameters: [String: String] = [:],
-         queryParametersEncodable: Encodable? = nil,
          queryParameters: [String: Any] = [:],
-         bodyParametersEncodable: Encodable? = nil,
          bodyParameters: [String: Any] = [:],
          responseDecoder: ResponseDecoder = JSONResponseDecoder(),
          logger: NetworkLoggerInterface = NetworkLogger()
