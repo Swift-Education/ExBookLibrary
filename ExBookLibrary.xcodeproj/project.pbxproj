@@ -20,6 +20,7 @@
 		B56632EE2C72421100AD85A1 /* ResponseRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56632E72C72421100AD85A1 /* ResponseRequestable.swift */; };
 		B56632EF2C72421100AD85A1 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56632E82C72421100AD85A1 /* NetworkLogger.swift */; };
 		B56632F02C72421100AD85A1 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56632E92C72421100AD85A1 /* Endpoint.swift */; };
+		B56632F32C72440400AD85A1 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56632F22C72440400AD85A1 /* AppConfiguration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		B56632E72C72421100AD85A1 /* ResponseRequestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseRequestable.swift; sourceTree = "<group>"; };
 		B56632E82C72421100AD85A1 /* NetworkLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
 		B56632E92C72421100AD85A1 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		B56632F22C72440400AD85A1 /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			children = (
 				B56632C72C723F8100AD85A1 /* AppDelegate.swift */,
 				B56632C92C723F8100AD85A1 /* SceneDelegate.swift */,
+				B56632F22C72440400AD85A1 /* AppConfiguration.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 				B56632EC2C72421100AD85A1 /* APIEnpoint.swift in Sources */,
 				B56632ED2C72421100AD85A1 /* Requestable.swift in Sources */,
 				B56632D92C72409600AD85A1 /* SearchBookViewController.swift in Sources */,
+				B56632F32C72440400AD85A1 /* AppConfiguration.swift in Sources */,
 				B56632C82C723F8100AD85A1 /* AppDelegate.swift in Sources */,
 				B56632CA2C723F8100AD85A1 /* SceneDelegate.swift in Sources */,
 				B56632DB2C7240A200AD85A1 /* BookDetailViewController.swift in Sources */,
