@@ -71,7 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				B56632DE2C72413E00AD85A1 /* App */,
-				B56632D82C72409600AD85A1 /* SearchBookViewController.swift */,
+				B56632F12C72426200AD85A1 /* SearchBookScene */,
 				B56632DA2C7240A200AD85A1 /* BookDetailViewController.swift */,
 				B56632DC2C7240B200AD85A1 /* FavoriteBooksViewController.swift */,
 				B56632E02C72421100AD85A1 /* Netowork */,
@@ -118,6 +118,14 @@
 				B56632E92C72421100AD85A1 /* Endpoint.swift */,
 			);
 			path = Enpoint;
+			sourceTree = "<group>";
+		};
+		B56632F12C72426200AD85A1 /* SearchBookScene */ = {
+			isa = PBXGroup;
+			children = (
+				B56632D82C72409600AD85A1 /* SearchBookViewController.swift */,
+			);
+			path = SearchBookScene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
