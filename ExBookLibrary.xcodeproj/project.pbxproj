@@ -14,6 +14,12 @@
 		B56632D92C72409600AD85A1 /* SearchBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56632D82C72409600AD85A1 /* SearchBookViewController.swift */; };
 		B56632DB2C7240A200AD85A1 /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56632DA2C7240A200AD85A1 /* BookDetailViewController.swift */; };
 		B56632DD2C7240B200AD85A1 /* FavoriteBooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56632DC2C7240B200AD85A1 /* FavoriteBooksViewController.swift */; };
+		B56632EA2C72421100AD85A1 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56632E12C72421100AD85A1 /* NetworkManager.swift */; };
+		B56632EC2C72421100AD85A1 /* APIEnpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56632E52C72421100AD85A1 /* APIEnpoint.swift */; };
+		B56632ED2C72421100AD85A1 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56632E62C72421100AD85A1 /* Requestable.swift */; };
+		B56632EE2C72421100AD85A1 /* ResponseRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56632E72C72421100AD85A1 /* ResponseRequestable.swift */; };
+		B56632EF2C72421100AD85A1 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56632E82C72421100AD85A1 /* NetworkLogger.swift */; };
+		B56632F02C72421100AD85A1 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56632E92C72421100AD85A1 /* Endpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,12 @@
 		B56632D82C72409600AD85A1 /* SearchBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBookViewController.swift; sourceTree = "<group>"; };
 		B56632DA2C7240A200AD85A1 /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
 		B56632DC2C7240B200AD85A1 /* FavoriteBooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteBooksViewController.swift; sourceTree = "<group>"; };
+		B56632E12C72421100AD85A1 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		B56632E52C72421100AD85A1 /* APIEnpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIEnpoint.swift; sourceTree = "<group>"; };
+		B56632E62C72421100AD85A1 /* Requestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
+		B56632E72C72421100AD85A1 /* ResponseRequestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseRequestable.swift; sourceTree = "<group>"; };
+		B56632E82C72421100AD85A1 /* NetworkLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
+		B56632E92C72421100AD85A1 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +74,7 @@
 				B56632D82C72409600AD85A1 /* SearchBookViewController.swift */,
 				B56632DA2C7240A200AD85A1 /* BookDetailViewController.swift */,
 				B56632DC2C7240B200AD85A1 /* FavoriteBooksViewController.swift */,
+				B56632E02C72421100AD85A1 /* Netowork */,
 				B56632CD2C723F8200AD85A1 /* Assets.xcassets */,
 				B56632CF2C723F8200AD85A1 /* LaunchScreen.storyboard */,
 				B56632D22C723F8200AD85A1 /* Info.plist */,
@@ -76,6 +89,35 @@
 				B56632C92C723F8100AD85A1 /* SceneDelegate.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		B56632E02C72421100AD85A1 /* Netowork */ = {
+			isa = PBXGroup;
+			children = (
+				B56632E12C72421100AD85A1 /* NetworkManager.swift */,
+				B56632E22C72421100AD85A1 /* DataMapping */,
+				B56632E42C72421100AD85A1 /* Enpoint */,
+			);
+			path = Netowork;
+			sourceTree = "<group>";
+		};
+		B56632E22C72421100AD85A1 /* DataMapping */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataMapping;
+			sourceTree = "<group>";
+		};
+		B56632E42C72421100AD85A1 /* Enpoint */ = {
+			isa = PBXGroup;
+			children = (
+				B56632E52C72421100AD85A1 /* APIEnpoint.swift */,
+				B56632E62C72421100AD85A1 /* Requestable.swift */,
+				B56632E72C72421100AD85A1 /* ResponseRequestable.swift */,
+				B56632E82C72421100AD85A1 /* NetworkLogger.swift */,
+				B56632E92C72421100AD85A1 /* Endpoint.swift */,
+			);
+			path = Enpoint;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,11 +190,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B56632EA2C72421100AD85A1 /* NetworkManager.swift in Sources */,
 				B56632DD2C7240B200AD85A1 /* FavoriteBooksViewController.swift in Sources */,
+				B56632EE2C72421100AD85A1 /* ResponseRequestable.swift in Sources */,
+				B56632EC2C72421100AD85A1 /* APIEnpoint.swift in Sources */,
+				B56632ED2C72421100AD85A1 /* Requestable.swift in Sources */,
 				B56632D92C72409600AD85A1 /* SearchBookViewController.swift in Sources */,
 				B56632C82C723F8100AD85A1 /* AppDelegate.swift in Sources */,
 				B56632CA2C723F8100AD85A1 /* SceneDelegate.swift in Sources */,
 				B56632DB2C7240A200AD85A1 /* BookDetailViewController.swift in Sources */,
+				B56632F02C72421100AD85A1 /* Endpoint.swift in Sources */,
+				B56632EF2C72421100AD85A1 /* NetworkLogger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
