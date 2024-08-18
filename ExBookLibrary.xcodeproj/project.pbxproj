@@ -58,16 +58,24 @@
 		B56632C62C723F8100AD85A1 /* ExBookLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				B56632C72C723F8100AD85A1 /* AppDelegate.swift */,
-				B56632C92C723F8100AD85A1 /* SceneDelegate.swift */,
-				B56632CD2C723F8200AD85A1 /* Assets.xcassets */,
-				B56632CF2C723F8200AD85A1 /* LaunchScreen.storyboard */,
-				B56632D22C723F8200AD85A1 /* Info.plist */,
+				B56632DE2C72413E00AD85A1 /* App */,
 				B56632D82C72409600AD85A1 /* SearchBookViewController.swift */,
 				B56632DA2C7240A200AD85A1 /* BookDetailViewController.swift */,
 				B56632DC2C7240B200AD85A1 /* FavoriteBooksViewController.swift */,
+				B56632CD2C723F8200AD85A1 /* Assets.xcassets */,
+				B56632CF2C723F8200AD85A1 /* LaunchScreen.storyboard */,
+				B56632D22C723F8200AD85A1 /* Info.plist */,
 			);
 			path = ExBookLibrary;
+			sourceTree = "<group>";
+		};
+		B56632DE2C72413E00AD85A1 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B56632C72C723F8100AD85A1 /* AppDelegate.swift */,
+				B56632C92C723F8100AD85A1 /* SceneDelegate.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
