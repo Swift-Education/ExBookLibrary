@@ -8,13 +8,12 @@
 import Foundation
 
 final class NetworkManager {
-    static let shared: NetworkManager = .init(session: .shared)
-    
     typealias CompletionHandler<T> = (Result<T, Error>) -> Void
     private let session: URLSession
-    
-    init(session: URLSession) {
+    private let config: NetworkConfigurable
+    init(session: URLSession, config: NetworkConfigurable) {
         self.session = session
+        self.config = config
     }
     
     func fetch(urlString: String, completion: @escaping ((Result<Data?, Error>) -> Void)) {

@@ -16,7 +16,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         let tabBarController = UITabBarController()
-        tabBarController.viewControllers = [SearchBookViewController(), FavoriteBooksViewController()]
+        
+        let searchBookViewController = createSearchBookViewController()
+        tabBarController.viewControllers = [searchBookViewController, FavoriteBooksViewController()]
         window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
     }
@@ -52,3 +54,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 }
 
+extension SceneDelegate {
+    private func createSearchBookViewController() -> SearchBookViewController {
+        let networkCongfig = ApiDataNetworkConfig(
+            baseURL: URL(string: "https://dapi.kakao.com/v3")!,
+            headers: ["Authorization" : AppConfiguration().apiKey]
+        )
+        
+        let networkService = NetworkManager(
+            session: URLSession(configuration: .default),
+            config: networkCongfig
+        )
+        
+        return SearchBookViewController(
+            model: SearchBookModel(networkService: networkService)
+        )
+    }
+}
